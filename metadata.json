@@ -1,0 +1,6 @@
+
+{
+  "name": "AfriMarket - Marketplace Mobile Money",
+  "description": "Une plateforme de marketplace moderne avec authentification, panier d'achat et un système de paiement intégré par Mobile Money (Orange, MTN, Wave, Moov).",
+  "requestFramePermissions": []
+}

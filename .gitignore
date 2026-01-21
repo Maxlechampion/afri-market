@@ -1,0 +1,15 @@
+
+# Sécurité : NE JAMAIS SUPPRIMER CETTE LIGNE
+.env
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Dossiers de build/dépendances (si tu en ajoutes plus tard)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
