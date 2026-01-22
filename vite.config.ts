@@ -1,16 +1,16 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   define: {
-    // On injecte les variables de manière isolée pour éviter l'erreur "process.env leak"
+    // Injection sécurisée des variables système pour le navigateur
     'process.env.API_KEY': JSON.stringify(process.env.API_KEY || ''),
     'process.env.FEDAPAY_PUBLIC_KEY': JSON.stringify(process.env.FEDAPAY_PUBLIC_KEY || ''),
   },
   build: {
     outDir: 'dist',
-    sourcemap: false
+    sourcemap: false,
+    minify: 'esbuild'
   }
 });
