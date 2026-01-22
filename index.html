@@ -7,19 +7,7 @@
     <title>AfriMarket - Marketplace Sécurisée</title>
     
     <!-- SÉCURITÉ : Politique de sécurité du contenu (CSP) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.fedapay.com https://esm.sh; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://generativelanguage.googleapis.com https://api.fedapay.com;">
-
-    <!-- CONFIGURATION ENVIRONNEMENT (MOCK) -->
-    <script>
-      // Cette partie simule un environnement de build (comme Vite ou Webpack) 
-      // pour que process.env soit accessible dans tous les fichiers .tsx
-      window.process = {
-        env: {
-          API_KEY: "AIzaSyC4GAqNBZ1W_WAfupgptIcKjn8N6Vm7t4M",
-          FEDAPAY_PUBLIC_KEY: "pk_live_TGdd161oGSS0FTJeS9FVsp8I"
-        }
-      };
-    </script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://generativelanguage.googleapis.com https://api.fedapay.com https://cdn.fedapay.com https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://images.unsplash.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.fedapay.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://generativelanguage.googleapis.com https://api.fedapay.com;">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,25 +19,27 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .no-select { user-select: none; }
-        /* Custom scrollbar pour un look premium */
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
-
 <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.1"
   }
 }
 </script>
 </head>
 <body class="bg-gray-50">
     <div id="root"></div>
+    <!-- Point d'entrée de l'application React -->
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
