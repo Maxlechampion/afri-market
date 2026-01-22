@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   define: {
-    // Injection sécurisée des variables système pour le navigateur
     'process.env.API_KEY': JSON.stringify(process.env.API_KEY || ''),
     'process.env.FEDAPAY_PUBLIC_KEY': JSON.stringify(process.env.FEDAPAY_PUBLIC_KEY || ''),
   },
