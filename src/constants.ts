@@ -1,4 +1,3 @@
-
 import { Product, Country, PaymentMethod } from './types';
 
 export const CATEGORIES = ['Électronique', 'Mode', 'Maison', 'Beauté', 'Sport'];
@@ -6,7 +5,7 @@ export const CATEGORIES = ['Électronique', 'Mode', 'Maison', 'Beauté', 'Sport'
 export const COUNTRIES: Country[] = [
   {
     code: 'CI',
-    name: 'Côte d’Ivoire',
+    name: 'Côte d\'Ivoire',
     flag: '🇨🇮',
     prefix: '+225',
     operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MTN_MONEY, PaymentMethod.WAVE, PaymentMethod.MOOV_MONEY]
@@ -31,6 +30,118 @@ export const COUNTRIES: Country[] = [
     flag: '🇲🇱',
     prefix: '+223',
     operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MOOV_MONEY]
+  },
+  {
+    code: 'BJ',
+    name: 'Bénin',
+    flag: '🇧🇯',
+    prefix: '+229',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MOOV_MONEY, PaymentMethod.MTN_MONEY]
+  },
+  {
+    code: 'BF',
+    name: 'Burkina Faso',
+    flag: '🇧🇫',
+    prefix: '+226',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MOOV_MONEY]
+  },
+  {
+    code: 'TG',
+    name: 'Togo',
+    flag: '🇹🇬',
+    prefix: '+228',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MOOV_MONEY]
+  },
+  {
+    code: 'GA',
+    name: 'Gabon',
+    flag: '🇬🇦',
+    prefix: '+241',
+    operators: [PaymentMethod.ORANGE_MONEY]
+  },
+  {
+    code: 'CG',
+    name: 'Congo',
+    flag: '🇨🇬',
+    prefix: '+242',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MOOV_MONEY]
+  },
+  {
+    code: 'CD',
+    name: 'République Démocratique du Congo',
+    flag: '🇨🇩',
+    prefix: '+243',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MTN_MONEY, PaymentMethod.MOOV_MONEY]
+  },
+  {
+    code: 'NE',
+    name: 'Niger',
+    flag: '🇳🇪',
+    prefix: '+227',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MOOV_MONEY]
+  },
+  {
+    code: 'GW',
+    name: 'Guinée-Bissau',
+    flag: '🇬🇼',
+    prefix: '+245',
+    operators: [PaymentMethod.ORANGE_MONEY]
+  },
+  {
+    code: 'KE',
+    name: 'Kenya',
+    flag: '🇰🇪',
+    prefix: '+254',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.WAVE]
+  },
+  {
+    code: 'TZ',
+    name: 'Tanzanie',
+    flag: '🇹🇿',
+    prefix: '+255',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.WAVE]
+  },
+  {
+    code: 'UG',
+    name: 'Ouganda',
+    flag: '🇺🇬',
+    prefix: '+256',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MTN_MONEY]
+  },
+  {
+    code: 'RW',
+    name: 'Rwanda',
+    flag: '🇷🇼',
+    prefix: '+250',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MTN_MONEY]
+  },
+  {
+    code: 'GH',
+    name: 'Ghana',
+    flag: '🇬🇭',
+    prefix: '+233',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.WAVE]
+  },
+  {
+    code: 'NG',
+    name: 'Nigeria',
+    flag: '🇳🇬',
+    prefix: '+234',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MOOV_MONEY]
+  },
+  {
+    code: 'ZA',
+    name: 'Afrique du Sud',
+    flag: '🇿🇦',
+    prefix: '+27',
+    operators: [PaymentMethod.ORANGE_MONEY]
+  },
+  {
+    code: 'MA',
+    name: 'Maroc',
+    flag: '🇲🇦',
+    prefix: '+212',
+    operators: [PaymentMethod.ORANGE_MONEY, PaymentMethod.MOOV_MONEY]
   }
 ];
 
@@ -43,7 +154,6 @@ export const MOCK_PRODUCTS: Product[] = [
     category: 'Électronique',
     image: 'https://images.unsplash.com/photo-1696446701796-da61225697cc?auto=format&fit=crop&q=80&w=600',
     rating: 4.8,
-    // Fix: Added missing sellerId to satisfy Product type
     sellerId: 'vendeur-1'
   },
   {
@@ -54,7 +164,6 @@ export const MOCK_PRODUCTS: Product[] = [
     category: 'Mode',
     image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600',
     rating: 4.5,
-    // Fix: Added missing sellerId to satisfy Product type
     sellerId: 'vendeur-1'
   },
   {
@@ -65,7 +174,6 @@ export const MOCK_PRODUCTS: Product[] = [
     category: 'Maison',
     image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&q=80&w=600',
     rating: 4.2,
-    // Fix: Added missing sellerId to satisfy Product type
     sellerId: 'vendeur-1'
   },
   {
@@ -76,7 +184,6 @@ export const MOCK_PRODUCTS: Product[] = [
     category: 'Électronique',
     image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=600',
     rating: 4.9,
-    // Fix: Added missing sellerId to satisfy Product type
     sellerId: 'vendeur-1'
   },
   {
@@ -87,7 +194,6 @@ export const MOCK_PRODUCTS: Product[] = [
     category: 'Mode',
     image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=600',
     rating: 4.6,
-    // Fix: Added missing sellerId to satisfy Product type
     sellerId: 'vendeur-1'
   },
   {
@@ -98,7 +204,6 @@ export const MOCK_PRODUCTS: Product[] = [
     category: 'Électronique',
     image: 'https://images.unsplash.com/photo-1544117518-30dd5ff7a986?auto=format&fit=crop&q=80&w=600',
     rating: 4.7,
-    // Fix: Added missing sellerId to satisfy Product type
     sellerId: 'vendeur-1'
   }
 ];
